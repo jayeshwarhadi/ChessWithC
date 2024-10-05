@@ -1,6 +1,6 @@
 #include <stdio.h>
 #include "logic.h"
-#include "board.h"
+#include "screen.h"
 
 int main(){
     char board[10][10] = {
