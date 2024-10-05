@@ -2,7 +2,25 @@
 #include "logic.h"
 #include "screen.h"
 
+/*
+    compiler statement = gcc main.c logic.c screen.c -o app
+*/
+
+int sideDecider(char p1[] , char p2[]){
+    printf("%s , %s" , p1 , p2);
+}
+
+void turnsPlayer(char player[]){
+    char checkmate = isCheckmate(); // function in logic.c
+    if(checkmate == "Y"){
+
+    }else{
+
+    }
+}
+
 int main(){
+    // Initial Board Placement
     char board[10][10] = {
         "XabcdefghX",
         "8rnbqkbnr8",
@@ -15,4 +33,18 @@ int main(){
         "1RNBQKBNR1",
         "XABCDEFGHX"
     };
+    // Players Initialization
+    char p1[10];
+    char p2[10];
+    printf("Enter Player 1 Name : ");
+    scanf("%s",&p1);
+    printf("Enter Player 2 Name : ");
+    scanf("%s",&p2);
+    // White-Black Position Picker
+    if(sideDecider(p1,p2) == 1){
+        turnsPlayer(p1); // First move Advantage P1
+    }else{
+        turnsPlayer(p2); // First move Advantage P2
+    }
+    return 0;
 }
