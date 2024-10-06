@@ -1,13 +1,16 @@
 #include <stdio.h>
 #include "logic.h"
 #include "screen.h"
+#include <stdlib.h>
+#include <time.h>
 
 /*
     compiler statement = gcc main.c logic.c screen.c -o app
 */
 
-int sideDecider(char p1[] , char p2[]){
-    printf("%s , %s" , p1 , p2);
+int sideDecider(){
+    srand(time(NULL));  // seed for random function
+    return rand()%2;
 }
 
 void turnsPlayer(char player[]){
@@ -41,7 +44,7 @@ int main(){
     printf("Enter Player 2 Name : ");
     scanf("%s",&p2);
     // White-Black Position Picker
-    if(sideDecider(p1,p2) == 1){
+    if(sideDecider() == 0){
         turnsPlayer(p1); // First move Advantage P1
     }else{
         turnsPlayer(p2); // First move Advantage P2
