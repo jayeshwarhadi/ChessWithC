@@ -1,1 +1,2 @@
 char isCheckmate();
+char isCheck();

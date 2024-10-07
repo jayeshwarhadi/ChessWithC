@@ -13,12 +13,15 @@ int sideDecider(){
     return rand()%2;
 }
 
-void turnsPlayer(char player[]){
+void turnsPlayer(char player[],char board[10][10]){
     char checkmate = isCheckmate(); // function in logic.c
+    char check = isCheck(); // function in logic.c
     if(checkmate == "Y"){
 
-    }else{
+    }else if(check == "Y"){
 
+    }else{
+        boardDisplay(board);
     }
 }
 
@@ -45,9 +48,9 @@ int main(){
     scanf("%s",&p2);
     // White-Black Position Picker
     if(sideDecider() == 0){
-        turnsPlayer(p1); // First move Advantage P1
+        turnsPlayer(p1,board); // First move Advantage P1
     }else{
-        turnsPlayer(p2); // First move Advantage P2
+        turnsPlayer(p2,board); // First move Advantage P2
     }
     return 0;
 }
