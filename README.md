@@ -1,13 +1,17 @@
-<h1 align="center">Chess.C</h1>
+<h1 align="center">
+<img src="assets/chess.png" height="40">
+Chess.C
+<img src="assets/chess.png" height="40">
+</h1>
 
-## 👩‍💻 About The Project
+## 👩‍💻 <img src="https://raw.githubusercontent.com/jayeshwarhadi/jayeshwarhadi/refs/heads/master/assets/about.png" height="20"> The Project
 
 <p align="left">The Project is an Practice project to implement C Programing Language</p>
 
 ##  <h2 align="left">🛠 Language and tools used</h2>
 
-<div align="left">
-  <img src="https://cdn.simpleicons.org/c/A8B9CC" height="40" alt="c logo"  />
+<div align="center">
+  <img src="https://raw.githubusercontent.com/jayeshwarhadi/jayeshwarhadi/refs/heads/master/assets/skills/c%20programing.png" height="40" alt="c logo"  />
 </div>
 
 <br><br>
