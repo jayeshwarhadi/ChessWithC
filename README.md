@@ -11,7 +11,7 @@ Chess.C
 ##  <h2 align="left">🛠 Language and tools used</h2>
 
 <div align="center">
-  <img src="https://raw.githubusercontent.com/jayeshwarhadi/jayeshwarhadi/refs/heads/master/assets/skills/c%20programing.png" height="40" alt="c logo"  />
+  <img src="https://raw.githubusercontent.com/jayeshwarhadi/jayeshwarhadi/refs/heads/master/assets/skills/c%20programing.png" height="60" alt="c logo"  />
 </div>
 
 <br><br>
