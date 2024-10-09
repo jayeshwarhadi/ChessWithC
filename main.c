@@ -16,9 +16,9 @@ int sideDecider(){
 void turnsPlayer(char player[],char board[10][10]){
     char checkmate = isCheckmate(); // function in logic.c
     char check = isCheck(); // function in logic.c
-    if(checkmate == "Y"){
+    if(checkmate == 'Y'){
 
-    }else if(check == "Y"){
+    }else if(check == 'Y'){
 
     }else{
         boardDisplay(board);
