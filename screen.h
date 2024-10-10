@@ -1,1 +1,1 @@
-char boardDisplay(char board[10][10]);
+void boardDisplay(char board[10][10]);

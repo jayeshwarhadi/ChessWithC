@@ -1,4 +1,5 @@
 #include <stdio.h>
+//#include <conio.h> //for executables retaining output screen when program is running (temporary)
 #include "logic.h"
 #include "screen.h"
 #include <stdlib.h>
@@ -47,10 +48,12 @@ int main(){
     printf("Enter Player 2 Name : ");
     scanf("%s",&p2);
     // White-Black Position Picker
-    if(sideDecider() == 0){
+    int toss = sideDecider();
+    if(toss == 0){
         turnsPlayer(p1,board); // First move Advantage P1
     }else{
         turnsPlayer(p2,board); // First move Advantage P2
     }
+    //getch(); //for executables retaining output screen (temporary)
     return 0;
 }
