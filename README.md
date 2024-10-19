@@ -19,7 +19,14 @@ Chess.C
 > [!NOTE]
 > The Project is not finished yet ! and is being actively worked on by me.
 
+> [!CAUTION]
+> Downloading Pre-Released Executables could be potentially unstable.
+> <br> Do Not DataMine the Program Executable. ![GitHub License](https://img.shields.io/github/license/jayeshwarhadi/ChessWithC?style=flat&labelColor=%2300573F&color=%2332de84)
+
 <br>
+
+##  <h3 align="left">Tags</h3>
+
 <div align="center">
   
   ![GitHub commit activity](https://img.shields.io/github/commit-activity/t/jayeshwarhadi/ChessWithC?style=flat&labelColor=%2300573F&color=%2332de84)
