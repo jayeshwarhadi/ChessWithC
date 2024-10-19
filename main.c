@@ -14,7 +14,14 @@ int sideDecider(){
     return rand()%2;
 }
 
-void turnsPlayer(char player[],char board[10][10]){
+char * Player(int index,char * p1,char * p2){
+    switch(index){
+        case 0:
+            return p1;
+    }
+}
+
+void turnsPlayer(int index,char board[10][10],char * p1, char * p2){
     char checkmate = isCheckmate(); // function in logic.c
     char check = isCheck(); // function in logic.c
     if(checkmate == 'Y'){
@@ -23,6 +30,13 @@ void turnsPlayer(char player[],char board[10][10]){
 
     }else{
         boardDisplay(board);
+    }
+    switch (index)
+    {
+    case 0:
+        turnsPlayer(1,board,p1,p2);
+    case 1:
+        turnsPlayer(0,board,p1,p2);
     }
 }
 
@@ -47,13 +61,10 @@ int main(){
     scanf("%s",&p1);
     printf("Enter Player 2 Name : ");
     scanf("%s",&p2);
-    // White-Black Position Picker
-    int toss = sideDecider();
-    if(toss == 0){
-        turnsPlayer(p1,board); // First move Advantage P1
-    }else{
-        turnsPlayer(p2,board); // First move Advantage P2
-    }
+    char *Pp1 = p1; // Pointers to Following Variables.
+    char *Pp2 = p2; // Pointers to Following Variables.
+    int sideWinner = sideDecider();
+    turnsPlayer(sideWinner,board,Pp1,Pp2);
     //getch(); //for executables retaining output screen (temporary)
     return 0;
 }
