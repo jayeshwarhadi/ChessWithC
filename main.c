@@ -1,5 +1,5 @@
 #include <stdio.h>
-//#include <conio.h> //for executables retaining output screen when program is running (temporary)
+#include <conio.h> //for executables retaining output screen when program is running (temporary)
 #include "logic.h"
 #include "screen.h"
 #include <stdlib.h>
@@ -14,7 +14,18 @@ int sideDecider(){
     return rand()%2;
 }
 
-void turnsPlayer(char player[],char board[10][10]){
+/*
+char * Player(int index,char * p1,char * p2){
+    switch(index){
+        case 0:
+            return p1;
+        case 1:
+            return p2;
+    }
+}
+*/
+
+void turnsPlayer(int turnCounter,char board[10][10],char * White, char * Black){
     char checkmate = isCheckmate(); // function in logic.c
     char check = isCheck(); // function in logic.c
     if(checkmate == 'Y'){
@@ -22,7 +33,15 @@ void turnsPlayer(char player[],char board[10][10]){
     }else if(check == 'Y'){
 
     }else{
-        boardDisplay(board);
+        boardDisplay(board,White,Black);
+        exit(0);
+    }
+    switch (turnCounter)
+    {
+    case 0:
+        turnsPlayer(1,board,White,Black);
+    case 1:
+        turnsPlayer(0,board,White,Black);
     }
 }
 
@@ -41,19 +60,26 @@ int main(){
         "XABCDEFGHX"
     };
     // Players Initialization
-    char p1[10];
-    char p2[10];
+    char p1[10],p2[10];
     printf("Enter Player 1 Name : ");
     scanf("%s",&p1);
     printf("Enter Player 2 Name : ");
     scanf("%s",&p2);
-    // White-Black Position Picker
+    char *Black , *White;
     int toss = sideDecider();
-    if(toss == 0){
-        turnsPlayer(p1,board); // First move Advantage P1
-    }else{
-        turnsPlayer(p2,board); // First move Advantage P2
+    switch (toss)
+    {
+    case 0:
+        White = p1;
+        Black = p2;
+        break;
+    case 1:
+        White = p2;
+        Black = p1;
+        break;
     }
-    //getch(); //for executables retaining output screen (temporary)
+    printf("%s Plays WHITE and %s Plays black\nBest of Luck!\n",White,Black);
+    turnsPlayer(toss,board,White,Black);
+    getch(); //for executables retaining output screen (temporary)
     return 0;
 }
