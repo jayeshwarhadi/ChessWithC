@@ -1,4 +1,4 @@
-logic.c
+archive/logic.c
 
 # Prerequisites
 *.d
